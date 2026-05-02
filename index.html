@@ -11,8 +11,8 @@
     <!-- Sosyal Medya Paylaşım Kartları (Open Graph Tags) -->
     <meta property="og:title" content="Taha Dindar - Kişisel Web Sitesi">
     <meta property="og:description" content="Taha Dindar'ın kişisel web sitesi. Sosyal medya hesaplarına ve biyografisine buradan ulaşabilirsiniz.">
-    <meta property="og:image" content="https://tahadindar.com.tr/image.png"> <!-- Kendi web sitende görsel ekleyebilirsin -->
-    <meta property="og:url" content="https://tahadindar.com.tr">
+    <meta property="og:image" content="https://yourwebsite.com/image.png">
+    <meta property="og:url" content="https://yourwebsite.com">
     
     <title>Taha Dindar - Kişisel Web Sitesi</title>
     
@@ -20,93 +20,125 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Modern Font Eklemesi -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background-color: black;
-            color: white;
+            margin: 0;
+            padding: 0;
+            /* Şık bir koyu degrade arka plan */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: monospace;
-            font-size: 24px;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            /* İçeriğin yumuşak bir şekilde belirmesi için animasyon */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
             margin: 0;
+            letter-spacing: 2px;
         }
 
-        .dot {
-            animation: blink 1s infinite step-start;
+        p.subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #b0bec5;
+            margin-top: 10px;
+            letter-spacing: 1px;
         }
 
-        @keyframes blink {
-            0%, 100% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
+        .social-links {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .dot:nth-child(1) {
-            animation-delay: 0.2s;
+        /* Yeni buton tarzı sosyal medya linkleri */
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 400;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
         }
 
-        .dot:nth-child(2) {
-            animation-delay: 0.4s;
-        }
-
-        .dot:nth-child(3) {
-            animation-delay: 0.6s;
+        .social-links a:hover {
+            background: white;
+            color: #0f2027;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: white;
         }
 
         footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 30px;
             text-align: center;
             width: 100%;
         }
 
-        footer .social-icons a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-        }
-
-        footer .social-icons a img {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-        }
-
         footer .copyright {
-            margin-top: 10px;
-            font-size: 14px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 300;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobilde daha iyi görünmesi için ufak dokunuşlar */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .social-links { flex-direction: column; gap: 10px; padding: 0 20px; }
+            .social-links a { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <div>
-        <span>Loading</span>
-        <span class="dot">.</span>
-        <span class="dot">.</span>
-        <span class="dot">.</span>
+
+    <div class="content">
+        <h1>Taha Dindar</h1>
+        <p class="subtitle">Çok Yakında / Coming Soon</p>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/thdndr" target="_blank">Instagram</a>
+            <a href="https://vsco.co/thdndr/gallery" target="_blank">VSCO</a>
+            <a href="https://www.linkedin.com/in/tahadindar" target="_blank">LinkedIn</a>
+        </div>
     </div>
 
     <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/thdndr" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="https://vsco.co/thdndr/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Cib-vsco_%28CoreUI_Icons_v1.0.0%29.svg" alt="VSCO">
-            </a>
-            <a href="https://www.linkedin.com/in/tahadindar" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-            </a>
-        </div>
         <div class="copyright">
-            &copy; 2024 Taha Dindar
+            &copy; 2026 Taha Dindar. Tüm Hakları Saklıdır.
         </div>
     </footer>
+
 </body>
 </html>
